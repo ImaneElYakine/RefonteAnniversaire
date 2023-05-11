@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:x-transition="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport">
+    <title>Joyeux Anniversaire</title>
+    <link rel="icon" href="img/favicon_mediametrie.png" />
+    <link rel="stylesheet" href="css/output.css">
+</head>
+
+<body class=" font-mediametrie h-screen flex flex-col">
+<!-- POPUP RECOmPENCE -->
+<div id="modal" class="relative z-10 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+    <div class="fixed inset-0 z-10 overflow-y-auto">
+        <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+            <div class="relative transform overflow-hidden bg-white text-left transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                    <div class="sm:flex sm:items-start">
+
+                        <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-center">
+                            <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Félicitations !</h3>
+                            <div class="mt-2">
+                                <p class="text-sm text-gray-800">Cette somme sera créditée dans votre cagnotte très prochainement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                    <button onclick="closeModal()" id="close" type="button" class="mt-3 inline-flex w-full justify-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- HEADER -->
+    <a href="https://www.mediametrie.fr/fr" target="_blank" class="absolute left-1/2 transform -translate-x-1/2">
+        <img alt="logo médiamétrie" src="img/logo_mediametrie.png" class="w-36">
+    </a>
+<!-- MAIN -->
+<div class="flex grow">
+    <div class="md:block my-auto lg:pl-52 lg:pt-16  ">
+        <!-- Texte -->
+        <div class="">
+            <div class="lg:text-4xl font-bold lg:py-4">
+                Joyeux anniversaire
+            </div>
+            <div class="lg:text-xl lg:py-2">
+                Nous vous souhaitons un très joyeux anniversaire !
+            </div>
+            <div class="lg:text-xl lg:py-2">
+                Grattez la carte ci-dessous, une petite surprise vous attend...
+            </div>
+        </div>
+        <!-- Carte à gratter -->
+        <img class="lg:py-4 absolute" id="fond">
+        <canvas class="lg:py-4 relative" width="450" height="280" id="bridge" ></canvas>
+    </div>
+    <div class="">
+        <img class="hidden sm:block fixed h-screen lg:right-12 md:right-6" src="img/fond.svg">
+    </div>
+</div>
+<!-- FOOTER -->
+<footer class=" z-0">
+<div class="w-full mx-auto container md:pb-6 pb-4 md:pl-6 pl-4 md:flex md:items-center md:justify-start">
+    <ul class="flex flex-wrap justify-end items-center mt-3 text-xxs xs:text-sm text-gray-900 opacity-80 sm:mt-0">
+        <li>
+                <span class=" sm:text-center mr-1 md:mr-6">© 2023 <a class="hover:underline"
+                                                                                href="https://www.mediametrie.fr/fr"
+                                                                                target="_blank">Médiamétrie</a>
+                </span>
+        </li>
+        <li>
+            <a class="mr-1 hover:underline md:mr-6" href="#">Mentions légales</a>
+        </li>
+        <li>
+            <a class="mr-1 hover:underline md:mr-6" href="#">C.G.U</a>
+        </li>
+    </ul>
+</div>
+</footer>
+
+<script src="http://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>
+<script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>
