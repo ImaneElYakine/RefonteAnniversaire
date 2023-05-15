@@ -8,6 +8,9 @@ module.exports = {
       fontFamily: {
         'mediametrie': ['Mediametrie', 'sans-serif'],
       },
+      screens: {
+        'xl': '1400px',
+      }
     },
   },
   plugins: [],

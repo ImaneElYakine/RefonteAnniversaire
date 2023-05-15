@@ -544,9 +544,9 @@ video {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1400px) {
   .container {
-    max-width: 1280px;
+    max-width: 1400px;
   }
 }
 
@@ -829,6 +829,8 @@ video {
   width: 400px;
 }
 
+/* Petit device */
+
 @media screen and (max-width: 500px)  {
   html {
   }
@@ -840,6 +842,23 @@ video {
 
   #texte {
     width: 320px;
+  }
+}
+
+/* Grand device */
+
+@media screen and (min-width: 1400px) {
+  html {
+    background-color: red;
+  }
+
+  #bridge, #fond {
+    width: 500px;
+    height: 350px;
+  }
+
+  #texte {
+    width: 500px;
   }
 }
 
@@ -988,5 +1007,12 @@ video {
 
   .lg\:pt-16 {
     padding-top: 4rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .xl\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
