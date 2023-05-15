@@ -7,7 +7,9 @@
     src: url("/Mediametrie.ttf");
 }
 
-
+#texte {
+    width: 450px;
+}
 
 @media screen and (max-width: 500px)  {
     html {
@@ -16,5 +18,9 @@
     #bridge, #fond {
         width: 300px;
         height: 186px;
+    }
+
+    #texte {
+        width: 300px;
     }
 }

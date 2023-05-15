@@ -679,11 +679,6 @@ video {
   overflow-y: auto;
 }
 
-.bg-gray-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
-}
-
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
@@ -830,6 +825,10 @@ video {
   src: url("/Mediametrie.ttf");
 }
 
+#texte {
+  width: 450px;
+}
+
 @media screen and (max-width: 500px)  {
   html {
   }
@@ -837,6 +836,10 @@ video {
   #bridge, #fond {
     width: 300px;
     height: 186px;
+  }
+
+  #texte {
+    width: 300px;
   }
 }
 
@@ -895,11 +898,6 @@ video {
     align-items: center;
   }
 
-  .sm\:bg-gray-600 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(75 85 99 / var(--tw-bg-opacity));
-  }
-
   .sm\:p-0 {
     padding: 0px;
   }
@@ -949,11 +947,6 @@ video {
 
   .md\:justify-start {
     justify-content: flex-start;
-  }
-
-  .md\:bg-gray-800 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
   }
 
   .md\:pb-6 {
