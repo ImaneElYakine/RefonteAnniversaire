@@ -849,7 +849,6 @@ video {
 
 @media screen and (min-width: 1400px) {
   html {
-    background-color: red;
   }
 
   #bridge, #fond {
@@ -1014,5 +1013,10 @@ video {
   .xl\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
