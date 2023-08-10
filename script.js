@@ -81,28 +81,40 @@ function addTouchMove() {
 // Fonction qui révèle le prix après un minimum effacé
 function countPercent() {
     //Calcul du pourcentage effacé
-    var data = bridgeCanvas.getImageData(0,0,bridge.width,bridge.height).data;
+    var data = bridgeCanvas.getImageData(0, 0, bridge.width, bridge.height).data;
     var nb = 0;
     for (let i = 0; i < data.length; i++) {
-        if(data[i] !== 0){
+        if (data[i] !== 0) {
             nb++;
         }
     }
     var percent = (nb * 100) / data.length;
     // Révélation de l'image
-    if(percent <= 50){
+    if (percent <= 50) {
         bridge.removeEventListener("touchmove", addTouchMove);
-        bridgeCanvas.clearRect(0,0,bridge.width,bridge.height);
+        bridgeCanvas.clearRect(0, 0, bridge.width, bridge.height);
         // On enlève la fonction dessin
         var el = document.getElementById('bridge'),
             elClone = el.cloneNode(true);
         el.parentNode.replaceChild(elClone, el);
         // On dévoile la popup
-        const modal = document.getElementById("modal");
-        modal.classList.remove("hidden");
-
+        //const modal = document.getElementById("modal");
+        //modal.classList.remove("hidden");
+        //On génère le cadeau
+        const alea = Math.floor(Math.random() * 3) + 1
+        if (alea === 1) {
+            document.getElementById("cadeau-photo").src = "img/exemple-cadeau1.PNG";
+            document.getElementById("cadeau-texte").innerText = "Carte EthiKdo de 100€";
+        } else if (alea === 2) {
+            document.getElementById("cadeau-photo").src = "";
+            document.getElementById("cadeau-texte").innerText = "PERDU";
+        } else if (alea === 3) {
+            document.getElementById("cadeau-photo").src = "img/exemple-cadeau2.jpg";
+            document.getElementById("cadeau-texte").innerText = "IPhone 14 Pro Max";
+        }
     }
 }
+
 
 function closeModal(){
     const modal = document.getElementById("modal");
