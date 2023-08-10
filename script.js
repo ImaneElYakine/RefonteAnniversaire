@@ -13,7 +13,7 @@ img.onload = function(){
     bridgeCanvas.drawImage(img, 0, 0);
     var nb = 0;
     for (let i = 0; i < data.length; i++) {
-        if(data[i] != 0){
+        if(data[i] !== 0){
             nb++;
         }
     }
@@ -55,7 +55,7 @@ function addMouseMove(){
     bridge.addEventListener("mousemove", function(e) {
         var brushPos = getBrushPos(e.clientX, e.clientY);
         var leftBut = detectLeftButton(e);
-        if (leftBut == 1) {
+        if (leftBut === 1) {
             drawDot(brushPos.x, brushPos.y);
             countPercent();
         }
@@ -85,7 +85,7 @@ function countPercent() {
     var data = bridgeCanvas.getImageData(0,0,bridge.width,bridge.height).data;
     var nb = 0;
     for (let i = 0; i < data.length; i++) {
-        if(data[i] != 0){
+        if(data[i] !== 0){
             nb++;
         }
     }
@@ -93,7 +93,6 @@ function countPercent() {
     // Révélation de l'image
     if(percent <= 55){
         bridge.removeEventListener("touchmove", addTouchMove);
-        console.log("yes");
         bridgeCanvas.clearRect(0,0,bridge.width,bridge.height);
         // On enlève la fonction dessin
         var el = document.getElementById('bridge'),
