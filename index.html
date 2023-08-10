@@ -8,31 +8,9 @@
     <link rel="stylesheet" href="css/output.css">
 </head>
 
-<body class=" font-mediametrie h-screen flex flex-col">
-<!-- POPUP RECOmPENCE -->
-<div id="modal" class="relative z-10 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
-    <div class="fixed inset-0 z-10 overflow-y-auto">
-        <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-            <div class="relative transform overflow-hidden bg-white text-left transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                    <div class="sm:flex sm:items-start">
+<body class=" font-mediametrie h-screen flex flex-col bg-main bg-no-repeat bg-cover bg-center bg-fixed">
 
-                        <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-center">
-                            <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Félicitations !</h3>
-                            <div class="mt-2">
-                                <p class="text-sm text-gray-800">Cette somme sera créditée dans votre cagnotte très prochainement.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                    <button onclick="closeModal()" id="close" type="button" class="mt-3 inline-flex w-full justify-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">Fermer</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 <!-- HEADER -->
     <a href="https://www.mediametrie.fr/fr" target="_blank" class="absolute left-1/2 transform -translate-x-1/2">
         <img alt="logo médiamétrie" src="img/logo_mediametrie.png" class="w-36">
@@ -41,29 +19,16 @@
 <div class="flex grow">
     <div class="md:block my-auto xl:pl:74 lg:pl-52 sm:pl-8 pl-4 md:pl-16 lg:pt-16">
         <!-- Texte -->
-        <div id="texte" class="">
-            <div class="xl:text-3xl md:text-2xl text-xl font-bold lg:py-4 py-3">
-                Joyeux anniversaire
-            </div>
-            <div class="xl:text-xl md:text-lg text-md py-1">
-                Médiamétrie vous a réservé une surprise ...
-            </div>
-            <div class="xl:text-xl md:text-lg text-md py-1">
-                Grattez la carte ci-dessous, et découvrez ce qui vous attend.
-            </div>
-        </div>
         <!-- Carte à gratter -->
         <img width="400" height="249" class="lg:py-4 py-3 absolute" id="fond">
         <canvas class="lg:py-4 py-3 relative" width="400" height="249" id="bridge" ></canvas>
     </div>
-    <div class="hidden sm:block">
-        <img class="hidden sm:block fixed h-screen lg:right-12 md:right-6" src="img/fond.svg">
-    </div>
+
 </div>
 <!-- FOOTER -->
-<footer class=" z-0">
-<div class="w-full mx-auto container md:pb-6 pb-4 md:pl-6 pl-4 md:flex md:items-center md:justify-start">
-    <ul class="flex flex-wrap justify-end items-center mt-3 text-xxs xs:text-sm text-gray-900 opacity-80 sm:mt-0">
+<footer class="z-0">
+<div class="w-full mx-auto container md:items-center">
+    <ul class="flex flex-wrap justify-center items-center mt-3 text-xxs xs:text-sm text-gray-900 opacity-80 sm:mt-0">
         <li>
                 <span class=" sm:text-center mr-1 md:mr-6">© 2023 <a class="hover:underline"
                                                                                 href="https://www.mediametrie.fr/fr"

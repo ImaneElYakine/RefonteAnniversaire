@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'main': "url('/img/background.svg')",
+      },
       fontFamily: {
         'mediametrie': ['Mediametrie', 'sans-serif'],
       },
