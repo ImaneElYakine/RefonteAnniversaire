@@ -40,7 +40,52 @@
     #texte {
         width: 500px;
     }
-
-
-
 }
+
+main{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+#piece{
+    height: 50vh;
+    max-height: 820px;
+    position: relative;
+    width: 41vh;
+}
+
+#holder{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: white;
+}
+
+#painting{
+    height: 100%;
+    position: absolute;
+    transform: translateY(0%);
+    width: 100%;
+    background: url("../img/fond-carte.svg");
+    background-size: cover;
+    top: 0;
+}
+
+#bridge {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 28vh;
+    height: 18.35vh;
+}
+
+
+

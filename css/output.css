@@ -572,10 +572,6 @@ video {
   position: absolute;
 }
 
-.relative {
-  position: relative;
-}
-
 .left-1\/2 {
   left: 50%;
 }
@@ -587,11 +583,6 @@ video {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
 }
 
 .mr-1 {
@@ -616,10 +607,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.grow {
-  flex-grow: 1;
 }
 
 .-translate-x-1\/2 {
@@ -665,15 +652,6 @@ video {
 
 .bg-no-repeat {
   background-repeat: no-repeat;
-}
-
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
-.pl-4 {
-  padding-left: 1rem;
 }
 
 .font-mediametrie {
@@ -731,6 +709,51 @@ video {
   }
 }
 
+main{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+#piece{
+  height: 50vh;
+  max-height: 820px;
+  position: relative;
+  width: 41vh;
+}
+
+#holder{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: white;
+}
+
+#painting{
+  height: 100%;
+  position: absolute;
+  transform: translateY(0%);
+  width: 100%;
+  background: url("../img/fond-carte.svg");
+  background-size: cover;
+  top: 0;
+}
+
+#bridge {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 28vh;
+  height: 18.35vh;
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
@@ -738,10 +761,6 @@ video {
 @media (min-width: 640px) {
   .sm\:mt-0 {
     margin-top: 0px;
-  }
-
-  .sm\:pl-8 {
-    padding-left: 2rem;
   }
 
   .sm\:text-center {
@@ -754,30 +773,10 @@ video {
     margin-right: 1.5rem;
   }
 
-  .md\:block {
-    display: block;
-  }
-
   .md\:items-center {
     align-items: center;
   }
-
-  .md\:pl-16 {
-    padding-left: 4rem;
-  }
 }
 
-@media (min-width: 1024px) {
-  .lg\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
 
-  .lg\:pl-52 {
-    padding-left: 13rem;
-  }
 
-  .lg\:pt-16 {
-    padding-top: 4rem;
-  }
-}

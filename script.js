@@ -5,7 +5,7 @@ var bridge = document.getElementById("bridge"),
     nbDot = 0,
     img = new Image();
 img.crossOrigin = "Anonymous";
-img.src = './img/carte-grattage.jpg';
+img.src = './img/grattage.svg';
 
 var data = bridgeCanvas.getImageData(0,0,bridge.width,bridge.height).data;
 
@@ -17,7 +17,6 @@ img.onload = function(){
             nb++;
         }
     }
-    document.getElementById("fond").src = "img/carte-fond.jpg";
 }
 
 addMouseMove();
@@ -55,7 +54,7 @@ function addMouseMove(){
     bridge.addEventListener("mousemove", function(e) {
         var brushPos = getBrushPos(e.clientX, e.clientY);
         var leftBut = detectLeftButton(e);
-        if (leftBut === 1) {
+        if (leftBut == 1) {
             drawDot(brushPos.x, brushPos.y);
             countPercent();
         }
@@ -91,7 +90,7 @@ function countPercent() {
     }
     var percent = (nb * 100) / data.length;
     // Révélation de l'image
-    if(percent <= 55){
+    if(percent <= 50){
         bridge.removeEventListener("touchmove", addTouchMove);
         bridgeCanvas.clearRect(0,0,bridge.width,bridge.height);
         // On enlève la fonction dessin
@@ -109,5 +108,3 @@ function closeModal(){
     const modal = document.getElementById("modal");
     modal.classList.add("hidden");
 }
-
-
