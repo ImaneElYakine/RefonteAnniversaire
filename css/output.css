@@ -673,6 +673,11 @@ video {
   src: url("/Mediametrie.ttf");
 }
 
+body {
+  background: url('/img/background.svg') no-repeat center center fixed;
+  background-size: cover;
+}
+
 #texte {
   width: 400px;
 }
