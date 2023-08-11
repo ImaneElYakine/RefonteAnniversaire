@@ -605,6 +605,14 @@ video {
   height: 100vh;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
 .w-24 {
   width: 6rem;
 }
@@ -615,6 +623,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-auto {
+  width: auto;
 }
 
 .-translate-x-1\/2 {
@@ -640,10 +652,6 @@ video {
 
 .justify-center {
   justify-content: center;
-}
-
-.bg-main {
-  background-image: url('/img/background.svg');
 }
 
 .bg-cover {
