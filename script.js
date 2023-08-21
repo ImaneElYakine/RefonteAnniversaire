@@ -32,12 +32,12 @@ if (alea === 1) {
 } else if (alea === 2) {
     document.getElementById("cadeau-photo").src = "img/cadeau-perdu.png";
     document.getElementById("cadeau-texte").innerText = "PERDU";
-    document.getElementById("holder").style.background = "url('../img/fond-perdant.jpg')";
+    document.getElementById("holder").style.background = "url('/img/fond-perdant.jpg')";
     document.getElementById("holder").style.backgroundSize = "cover";
 } else if (alea === 3) {
     document.getElementById("cadeau-photo").src = "img/exemple-cadeau2.jpg";
     document.getElementById("cadeau-texte").innerText = "IPhone 14 Pro Max";
-    document.getElementById("holder").style.background = "url('../img/fond-gagnant.jpg')";
+    document.getElementById("holder").style.background = "url('/img/fond-gagnant.jpg')";
     document.getElementById("holder").style.backgroundSize = "cover";
 }
 
@@ -91,13 +91,13 @@ function addTouchMove() {
         e.preventDefault();
         var touch = e.targetTouches[0];
         if (touch) {
-            audio.play();
             var brushPos = getBrushPos(touch.pageX, touch.pageY);
             drawDot(brushPos.x, brushPos.y);
         }
     }, false);
 
     bridge.addEventListener("touchend", function (e) {
+        audio.play();
         e.preventDefault();
         countPercent();
     }, false);
