@@ -18,9 +18,33 @@ img.onload = function(){
         }
     }
 }
-
+const audio = new Audio('son-scratch.wav');
 addMouseMove();
 addTouchMove();
+
+//On génère le cadeau
+const alea = Math.floor(Math.random() * 3) + 1
+if (alea === 1) {
+    document.getElementById("cadeau-photo").src = "img/exemple-cadeau1.PNG";
+    document.getElementById("cadeau-texte").innerText = "Carte EthiKdo de 100€";
+    document.getElementById("holder").style.background = "url('../img/fond-gagnant.jpg')";
+    document.getElementById("holder").style.backgroundSize = "cover";
+} else if (alea === 2) {
+    document.getElementById("cadeau-photo").src = "img/cadeau-perdu.png";
+    document.getElementById("cadeau-texte").innerText = "PERDU";
+    document.getElementById("holder").style.background = "url('../img/fond-perdant.jpg')";
+    document.getElementById("holder").style.backgroundSize = "cover";
+} else if (alea === 3) {
+    document.getElementById("cadeau-photo").src = "img/exemple-cadeau2.jpg";
+    document.getElementById("cadeau-texte").innerText = "IPhone 14 Pro Max";
+    document.getElementById("holder").style.background = "url('../img/fond-gagnant.jpg')";
+    document.getElementById("holder").style.backgroundSize = "cover";
+}
+
+
+
+
+
 
 
 // Fonctions de dessins pour le grattage
@@ -55,6 +79,7 @@ function addMouseMove(){
         var brushPos = getBrushPos(e.clientX, e.clientY);
         var leftBut = detectLeftButton(e);
         if (leftBut == 1) {
+            audio.play();
             drawDot(brushPos.x, brushPos.y);
             countPercent();
         }
@@ -66,6 +91,7 @@ function addTouchMove() {
         e.preventDefault();
         var touch = e.targetTouches[0];
         if (touch) {
+            audio.play();
             var brushPos = getBrushPos(touch.pageX, touch.pageY);
             drawDot(brushPos.x, brushPos.y);
         }
@@ -97,30 +123,5 @@ function countPercent() {
         var el = document.getElementById('bridge'),
             elClone = el.cloneNode(true);
         el.parentNode.replaceChild(elClone, el);
-        // On dévoile la popup
-        //const modal = document.getElementById("modal");
-        //modal.classList.remove("hidden");
-        //On génère le cadeau
-        const alea = Math.floor(Math.random() * 3) + 1
-        if (alea === 1) {
-            document.getElementById("cadeau-photo").src = "img/exemple-cadeau1.PNG";
-            document.getElementById("cadeau-texte").innerText = "Carte EthiKdo de 100€";
-            document.getElementById("holder").style.background = "url('../img/fond-gagnant.jpg')";
-            document.getElementById("holder").style.backgroundSize = "cover";
-        } else if (alea === 2) {
-            document.getElementById("cadeau-photo").src = "img/cadeau-perdu.png";
-            document.getElementById("cadeau-texte").innerText = "PERDU";
-        } else if (alea === 3) {
-            document.getElementById("cadeau-photo").src = "img/exemple-cadeau2.jpg";
-            document.getElementById("cadeau-texte").innerText = "IPhone 14 Pro Max";
-            document.getElementById("holder").style.background = "url('../img/fond-gagnant.jpg')";
-            document.getElementById("holder").style.backgroundSize = "cover";
-        }
     }
-}
-
-
-function closeModal(){
-    const modal = document.getElementById("modal");
-    modal.classList.add("hidden");
 }

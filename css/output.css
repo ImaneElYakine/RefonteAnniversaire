@@ -597,36 +597,24 @@ video {
   display: flex;
 }
 
-.h-auto {
-  height: auto;
+.h-16 {
+  height: 4rem;
 }
 
 .h-screen {
   height: 100vh;
 }
 
-.h-24 {
-  height: 6rem;
-}
-
-.h-16 {
-  height: 4rem;
-}
-
-.w-24 {
-  width: 6rem;
-}
-
 .w-36 {
   width: 9rem;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-auto {
   width: auto;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .-translate-x-1\/2 {
@@ -652,22 +640,6 @@ video {
 
 .justify-center {
   justify-content: center;
-}
-
-.bg-cover {
-  background-size: cover;
-}
-
-.bg-fixed {
-  background-attachment: fixed;
-}
-
-.bg-center {
-  background-position: center;
-}
-
-.bg-no-repeat {
-  background-repeat: no-repeat;
 }
 
 .font-mediametrie {
