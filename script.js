@@ -74,7 +74,7 @@ function addMouseMove(){
         var brushPos = getBrushPos(e.clientX, e.clientY);
         var leftBut = detectLeftButton(e);
         if (leftBut == 1) {
-            //audio.play();
+            audio.play();
             drawDot(brushPos.x, brushPos.y);
             countPercent();
         }
