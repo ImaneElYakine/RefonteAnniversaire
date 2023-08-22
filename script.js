@@ -19,7 +19,7 @@ img.onload = function(){
     }
     document.getElementById("fond").src = "img/carte-fond.jpg";
 }
-//const audio = new Audio('son-scratch.wav');
+const audio = new Audio('son-scratch.wav');
 addMouseMove();
 addTouchMove();
 
