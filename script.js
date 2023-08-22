@@ -101,18 +101,19 @@ function addTouchMove() {
 // Fonction qui révèle le prix après un minimum effacé
 function countPercent() {
     //Calcul du pourcentage effacé
-    var data = bridgeCanvas.getImageData(0, 0, bridge.width, bridge.height).data;
+    var data = bridgeCanvas.getImageData(0,0,bridge.width,bridge.height).data;
     var nb = 0;
     for (let i = 0; i < data.length; i++) {
-        if (data[i] !== 0) {
+        if(data[i] != 0){
             nb++;
         }
     }
     var percent = (nb * 100) / data.length;
     // Révélation de l'image
-    if (percent <= 50) {
+    if(percent <= 55){
         bridge.removeEventListener("touchmove", addTouchMove);
-        bridgeCanvas.clearRect(0, 0, bridge.width, bridge.height);
+        console.log("yes");
+        bridgeCanvas.clearRect(0,0,bridge.width,bridge.height);
         // On enlève la fonction dessin
         var el = document.getElementById('bridge'),
             elClone = el.cloneNode(true);
