@@ -17,8 +17,9 @@ img.onload = function(){
             nb++;
         }
     }
+    document.getElementById("fond").src = "img/carte-fond.jpg";
 }
-const audio = new Audio('son-scratch.wav');
+//const audio = new Audio('son-scratch.wav');
 addMouseMove();
 addTouchMove();
 
@@ -74,7 +75,7 @@ function addMouseMove(){
         var brushPos = getBrushPos(e.clientX, e.clientY);
         var leftBut = detectLeftButton(e);
         if (leftBut == 1) {
-            audio.play();
+            //audio.play();
             drawDot(brushPos.x, brushPos.y);
             countPercent();
         }
