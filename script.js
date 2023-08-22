@@ -23,7 +23,7 @@ addMouseMove();
 addTouchMove();
 
 //On génère le cadeau
-const alea = Math.floor(Math.random() * 3) + 1
+/*const alea = Math.floor(Math.random() * 3) + 1
 if (alea === 1) {
     document.getElementById("cadeau-photo").src = "img/exemple-cadeau1.PNG";
     document.getElementById("cadeau-texte").innerText = "Carte EthiKdo de 100€";
@@ -39,12 +39,7 @@ if (alea === 1) {
     document.getElementById("cadeau-texte").innerText = "IPhone 14 Pro Max";
     document.getElementById("holder").style.background = "url('img/fond-gagnant.jpg')";
     document.getElementById("holder").style.backgroundSize = "cover";
-}
-
-
-
-
-
+}*/
 
 
 // Fonctions de dessins pour le grattage
