@@ -36,7 +36,7 @@ if (alea === 1) {
     document.getElementById("holder").style.backgroundSize = "cover";
 } else if (alea === 2) {
     document.getElementById("cadeau-photo").src = "img/cadeau-perdu.png";
-    document.getElementById("cadeau-texte").innerText = "PERDUUU";
+    document.getElementById("cadeau-texte").innerText = "PERDU";
     document.getElementById("holder").style.background = "url('img/fond-perdant.jpg')";
     document.getElementById("holder").style.backgroundSize = "cover";
 } else if (alea === 3) {
