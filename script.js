@@ -88,11 +88,11 @@ function addMouseMove(){
 function addTouchMove() {
 
     bridge.addEventListener("touchstart", function (e) {
-        alert("start");
+        audio.play();
     }, false);
 
     bridge.addEventListener("touchmove", function (e) {
-        audio.play();
+
         e.preventDefault();
         var touch = e.targetTouches[0];
         if (touch) {
