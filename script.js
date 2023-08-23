@@ -20,6 +20,10 @@ img.onload = function(){
     document.getElementById("fond").src = "img/carte-fond.jpg";
 }
 const audio = new Audio('son-scratch.wav');
+const audioWin = new Audio('son-gagnant.mp3');
+const audioLoose = new Audio('son-perdant.mp3');
+
+
 addMouseMove();
 addTouchMove();
 
@@ -112,8 +116,14 @@ function countPercent() {
     var percent = (nb * 100) / data.length;
     // Révélation de l'image
     if(percent <= 55){
+        if (alea === 1) {
+           audioWin.play();
+        } else if (alea === 2) {
+            audioLoose.play();
+        } else if (alea === 3) {
+            audioWin.play();
+        }
         bridge.removeEventListener("touchmove", addTouchMove);
-        console.log("yes");
         bridgeCanvas.clearRect(0,0,bridge.width,bridge.height);
         // On enlève la fonction dessin
         var el = document.getElementById('bridge'),
