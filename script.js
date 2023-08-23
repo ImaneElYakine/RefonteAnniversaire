@@ -90,13 +90,13 @@ function addTouchMove() {
         e.preventDefault();
         var touch = e.targetTouches[0];
         if (touch) {
-            audio.play();
             var brushPos = getBrushPos(touch.pageX, touch.pageY);
             drawDot(brushPos.x, brushPos.y);
         }
     }, false);
 
     bridge.addEventListener("touchend", function (e) {
+        audio.play();
         e.preventDefault();
         countPercent();
     }, false);
